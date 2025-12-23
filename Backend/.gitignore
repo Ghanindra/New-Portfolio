@@ -1,0 +1,26 @@
+# Environment files
+.env
+.env.*
+
+# Dependencies
+node_modules/
+
+# Build folders
+client/build/
+dist/
+build/
+
+# Logs
+logs/
+*.log
+
+# Uploads (optional)
+uploads/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor configs
+.vscode/
+.idea/
