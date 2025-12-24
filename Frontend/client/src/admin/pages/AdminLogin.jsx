@@ -11,10 +11,10 @@ export default function AdminLogin() {
 
   const handleSubmit = async (e) => {
   e.preventDefault();
-  console.log("Submitting login:", { email, password });
+  // console.log("Submitting login:", { email, password });
   try {
     const res = await adminAPI.post("/admin/login", { email, password });
-    console.log("Login response:", res.data); // check what comes from backend
+    // console.log("Login response:", res.data); // check what comes from backend
 
     if (!res.data.user || !res.data.token) {
       // backend response unexpected
