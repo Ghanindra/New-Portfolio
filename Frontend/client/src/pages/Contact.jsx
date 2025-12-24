@@ -20,7 +20,7 @@ export default function Contact() {
 
     try {
       // Uncomment when API is ready
-      const res = await api.post('/contact', {
+      const res = await api.post('api/contact', {
         name,
         email,
         message,
