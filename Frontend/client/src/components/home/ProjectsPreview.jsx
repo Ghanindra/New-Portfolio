@@ -12,7 +12,7 @@ export default function ProjectsPreview() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await api.get("/projects")
+        const res = await api.get("api/projects")
         const featuredProjects = res.data.filter((project) => project.featured)
         setProjects(featuredProjects)
       } catch (err) {
