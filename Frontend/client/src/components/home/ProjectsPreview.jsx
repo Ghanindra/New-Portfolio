@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios"
 import { Link } from "react-router-dom"
-
+import api from "../../services/api"
 export default function ProjectsPreview() {
   const [hoveredProject, setHoveredProject] = useState(null)
   const [projects, setProjects] = useState([])
@@ -12,7 +12,7 @@ export default function ProjectsPreview() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/projects")
+        const res = await api.get("/projects")
         const featuredProjects = res.data.filter((project) => project.featured)
         setProjects(featuredProjects)
       } catch (err) {

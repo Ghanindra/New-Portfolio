@@ -3,6 +3,7 @@
 import React,{ useState } from "react"
 import axios from 'axios'
 import {Link} from "react-router-dom"
+import api from "../services/api"
 export default function Contact() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -19,7 +20,7 @@ export default function Contact() {
 
     try {
       // Uncomment when API is ready
-      const res = await axios.post('http://localhost:5000/api/contact', {
+      const res = await api.post('/contact', {
         name,
         email,
         message,

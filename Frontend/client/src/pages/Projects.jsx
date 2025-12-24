@@ -1,7 +1,8 @@
 "use client"
 
 import React, { useEffect, useState } from "react"
-import axios from "axios"
+// import axios from "axios"
+import api from "../services/api"
 import {Link} from 'react-router-dom'
 export default function Projects() {
   const [projects, setProjects] = useState([])
@@ -14,7 +15,7 @@ export default function Projects() {
 
   const fetchProjects = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/projects")
+      const res = await api.get("/projects")
       setProjects(res.data)
       setError(null)
     } catch (err) {

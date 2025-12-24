@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import axios from "axios"
 import {Link} from 'react-router-dom'
+import api from "../../services/api"
 export default function ProjectModal() {
   const { id } = useParams() // get project ID from route
   const navigate = useNavigate()
@@ -15,7 +16,7 @@ export default function ProjectModal() {
     const fetchProject = async () => {
       try {
         setIsLoading(true)
-        const res = await axios.get(`http://localhost:5000/api/projects/${id}`)
+        const res = await api.get(`/projects/${id}`)
         setProject(res.data)
         setError(null)
       } catch (err) {
