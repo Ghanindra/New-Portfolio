@@ -25,7 +25,7 @@ useEffect(() => {
       // Convert techStack string to array
       const techArray = techStack.split(",").map((tech) => tech.trim())
 
-      await adminAPI.post("/admin/projects", {
+      await adminAPI.post("api/admin/projects", {
         title,
         description,
         techStack: techArray,
