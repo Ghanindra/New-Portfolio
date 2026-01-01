@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 export default function ProjectList({ projects, fetchProjects }) {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure?")) {
-      await adminAPI.delete(`/admin/projects/${id}`)
+      await adminAPI.delete(`api/admin/projects/${id}`)
       fetchProjects()
     }
   }
