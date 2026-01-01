@@ -13,7 +13,7 @@ export default function AdminLogin() {
   e.preventDefault();
   // console.log("Submitting login:", { email, password });
   try {
-    const res = await adminAPI.post("api/admin/login", { email, password });
+    const res = await adminAPI.post("/api/admin/login", { email, password });
     // console.log("Login response:", res.data); // check what comes from backend
 
     if (!res.data.user || !res.data.token) {
