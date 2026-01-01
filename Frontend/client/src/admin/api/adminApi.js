@@ -3,7 +3,7 @@
 import axios from "axios";
 
 const adminAPI = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://portfolio-backend-two-ivory.vercel.app",
 });
 
 // Function to set JWT token in headers
