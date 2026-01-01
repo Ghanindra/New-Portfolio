@@ -16,7 +16,7 @@ export default function AdminDashboard() {
   // Fetch projects
   const fetchProjects = async () => {
     try {
-      const res = await adminAPI.get("/projects");
+      const res = await adminAPI.get("api/projects");
       setProjects(res.data);
     } catch (err) {
       console.error("Error fetching projects:", err);
@@ -26,7 +26,7 @@ export default function AdminDashboard() {
   // Fetch contacts
   const fetchContacts = async () => {
     try {
-      const res = await adminAPI.get("/admin/contacts");
+      const res = await adminAPI.get("api/admin/contacts");
       setContacts(res.data);
     } catch (err) {
       console.error("Error fetching contacts:", err);
