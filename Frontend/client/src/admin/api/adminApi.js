@@ -20,7 +20,7 @@
 import axios from "axios";
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
-
+console.log("api", API_URL)
 const adminAPI = axios.create({
   baseURL: API_URL,
   withCredentials: true, // allow cookies if backend uses them
