@@ -16,7 +16,7 @@ export default function ProjectModal() {
     const fetchProject = async () => {
       try {
         setIsLoading(true)
-        const res = await api.get(`/projects/${id}`)
+        const res = await api.get(`api/projects/${id}`)
         setProject(res.data)
         setError(null)
       } catch (err) {
